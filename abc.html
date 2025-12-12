@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Website Đám Cưới Hoàn Chỉnh - Ngọc Thạo &amp; Hồng Chibi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Website đám cưới hoàn chỉnh của Ngọc Thạo &amp; Hồng Chibi với đầy đủ các phần: Banner, Album ảnh, Chuyện tình yêu, Lời ngỏ, Sự kiện cưới, Cô dâu &amp; Chú rể, Hộp mừng cưới, Sổ lưu bút." />
+<meta name="keywords" content="Đám cưới, Wedding, Album ảnh cưới, Lời ngỏ, Sự kiện cưới, Cô dâu chú rể, Hộp mừng cưới, Sổ lưu bút" />
+<meta name="author" content="Biihappy.com" />
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Bellota+Text&family=Texturina:opsz,wght@12..72,100&family=Bonheur+Royale&display=swap" rel="stylesheet" />
+<style>
+:root {
+--primary-color: #e74c3c;
+--secondary-color: #3498db;
+--background-light: #f9f9f9;
+--text-color: #333;
+--font-primary: 'Bellota Text', cursive;
+--font-secondary: 'Great Vibes', cursive;
+--font-tertiary: 'Texturina', serif;
+}
+* {
+box-sizing: border-box;
+}
+body {
+margin: 0; padding: 0;
+font-family: var(--font-primary);
+background-color: var(--background-light);
+color: var(--text-color);
+line-height: 1.6;
+scroll-behavior: smooth;
+}
+h1, h2, h3, h4, h5 {
+margin: 0 0 1rem 0;
+font-family: var(--font-secondary);
+color: var(--primary-color);
+}
+h2.section-title {
+font-size: 2.5rem;
+text-align: center;
+margin-bottom: 0.5rem;
+}
+h3.section-sub-title {
+font-family: var(--font-tertiary);
+font-weight: 400;
+font-size: 1.2rem;
+color: var(--secondary-color);
+text-align: center;
+margin-bottom: 2rem;
+}
+a {
+color: var(--primary-color);
+text-decoration: none;
+transition: color 0.3s ease;
+}
+a:hover, a:focus {
+color: var(--secondary-color);
+outline: none;
+}
+.container {
+width: 90%;
+max-width: 1100px;
+margin: 0 auto;
+padding: 1rem 0;
+}
+/* Banner Section */
+.banner-section {
+background: url('https://cdn.biihappy.com/ziiweb/website/681f6b9db57ffc58b30e75a4/templates/643d7aa30be61636f4051958/2bc731a0f92ac0f47486f67272d0ef87.jpg') center center/cover no-repeat;
+height: 90vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: white;
+position: relative;
+padding: 0 1rem;
+}
+.banner-section::after {
+content: "";
+position: absolute;
+inset: 0;
+background: rgba(231, 76, 60, 0.6);
+z-index: 0;
+border-radius: 0 0 80px 80px;
+}
+.banner-content {
+position: relative;
+z-index: 1;
+max-width: 700px;
+}
+.banner-content h1 {
+font-family: var(--font-secondary);
+font-size: 4rem;
+margin-bottom: 0.5rem;
+text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+.banner-content p {
+font-size: 1.3rem;
+font-weight: 300;
+text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+/* Navigation */
+header {
+background: white;
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+nav {
+max-width: 1100px;
+margin: 0 auto;
+padding: 0.5rem 1rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+nav .logo {
+font-family: var(--font-secondary);
+font-size: 1.8rem;
+font-weight: 700;
+color: var(--primary-color);
+letter-spacing: 2px;
+}
+nav ul {
+list-style: none;
+display: flex;
+gap: 1.5rem;
+margin: 0;
+padding: 0;
+}
+nav ul li a {
+font-weight: 600;
+font-size: 1rem;
+color: var(--text-color);
+padding: 0.5rem 0.75rem;
+border-radius: 6px;
+transition: background-color 0.3s ease;
+}
+nav ul li a:hover,
+nav ul li a:focus {
+background-color: var(--primary-color);
+color: white;
+outline: none;
+}
+/* Responsive Nav */
+@media (max-width: 768px) {
+nav ul {
+display: none;
+}
+nav .menu-toggle {
+display: block;
+font-size: 1.8rem;
+cursor: pointer;
+color: var(--primary-color);
+}
+nav.active ul {
+display: flex;
+flex-direction: column;
+position: absolute;
+top: 60px;
+right: 1rem;
+background: white;
+box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+border-radius: 8px;
+padding: 1rem;
+width: 180px;
+}
+nav.active ul li {
+margin-bottom: 1rem;
+}
+nav.active ul li:last-child {
+margin-bottom: 0;
+}
+}
+/* Section common styles */
+section {
+padding: 4rem 0;
+background-color: white;
+border-radius: 16px;
+margin-bottom: 3rem;
+box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+/* Album Section */
+#gallery .gallery-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+gap: 1rem;
+}
+#gallery .gallery-item {
+border-radius: 12px;
+overflow: hidden;
+cursor: pointer;
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+transition: transform 0.3s ease;
+}
+#gallery .gallery-item:hover,
+#gallery .gallery-item:focus {
+transform: scale(1.05);
+outline: none;
+}
+#gallery .gallery-item img {
+width: 100%;
+height: auto;
+display: block;
+}
+/* Story Section */
+#story .timeline {
+max-width: 900px;
+margin: 0 auto;
+position: relative;
+padding-left: 40px;
+border-left: 3px solid var(--primary-color);
+}
+#story .timeline-card {
+position: relative;
+margin-bottom: 2.5rem;
+padding-left: 1rem;
+}
+#story .timeline-card::before {
+content: "";
+position: absolute;
+left: -12px;
+top: 0;
+width: 24px;
+height: 24px;
+background: var(--primary-color);
+border-radius: 50%;
+border: 3px solid white;
+box-shadow: 0 0 0 3px var(--primary-color);
+}
+#story .timeline-card h3 {
+color: var(--primary-color);
+margin-bottom: 0.3rem;
+}
+#story .timeline-card span.date {
+font-weight: 600;
+font-size: 0.9rem;
+color: var(--secondary-color);
+display: block;
+margin-bottom: 0.5rem;
+}
+#story .timeline-card p {
+font-size: 1rem;
+font-weight: 400;
+color: var(--text-color);
+}
+#story .timeline-card img {
+margin-top: 1rem;
+max-width: 100%;
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+/* Invitation Section */
+#invitation .invitation-content {
+max-width: 700px;
+margin: 0 auto;
+font-size: 1.1rem;
+font-weight: 400;
+color: var(--text-color);
+line-height: 1.7;
+text-align: center;
+}
+#invitation .couple-img img {
+max-width: 320px;
+width: 100%;
+display: block;
+margin: 2rem auto 0 auto;
+border-radius: 16px;
+box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+#invitation .invitation-couple p {
+font-size: 1.1rem;
+color: var(--primary-color);
+margin: 0.3rem 0;
+font-weight: 600;
+font-family: var(--font-secondary);
+}
+/* Event Section */
+#event .event-item {
+display: flex;
+flex-wrap: wrap;
+background: var(--background-light);
+border-radius: 16px;
+overflow: hidden;
+box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+margin-bottom: 2rem;
+transition: box-shadow 0.3s ease;
+}
+#event .event-item:hover,
+#event .event-item:focus-within {
+box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+outline: none;
+}
+#event .image-wrap {
+flex: 1 1 200px;
+background-size: cover;
+background-position: center;
+min-height: 180px;
+}
+#event .info-wrap {
+flex: 2 1 300px;
+padding: 1.5rem 2rem;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+#event .info-wrap h5 {
+font-size: 1.3rem;
+color: var(--primary-color);
+margin-bottom: 0.5rem;
+}
+#event .info-wrap strong {
+font-size: 1rem;
+color: var(--secondary-color);
+margin-bottom: 0.5rem;
+display: block;
+}
+#event .info-wrap p {
+font-size: 1rem;
+color: var(--text-color);
+margin-bottom: 1rem;
+}
+#event .info-wrap a {
+display: inline-block;
+margin-right: 1rem;
+background: var(--primary-color);
+color: white;
+padding: 0.5rem 1rem;
+border-radius: 8px;
+font-weight: 600;
+font-size: 0.9rem;
+transition: background-color 0.3s ease;
+}
+#event .info-wrap a:hover,
+#event .info-wrap a:focus {
+background: var(--secondary-color);
+outline: none;
+}
+/* Couple Section */
+#couple .wrap-people {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 3rem;
+max-width: 900px;
+margin: 0 auto;
+}
+#couple .member {
+background: var(--background-light);
+border-radius: 16px;
+box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+padding: 2rem 1.5rem;
+flex: 1 1 350px;
+text-align: center;
+}
+#couple .member-image img {
+width: 180px;
+height: 180px;
+object-fit: cover;
+border-radius: 50%;
+box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+margin-bottom: 1rem;
+}
+#couple .parent-name {
+font-weight: 600;
+color: var(--secondary-color);
+margin-bottom: 0.3rem;
+font-size: 1rem;
+}
+#couple .text-story {
+font-size: 1rem;
+color: var(--text-color);
+margin-bottom: 1rem;
+font-family: var(--font-tertiary);
+line-height: 1.5;
+}
+#couple .member-name {
+font-size: 1.5rem;
+font-weight: 700;
+color: var(--primary-color);
+margin-bottom: 1rem;
+font-family: var(--font-secondary);
+}
+/* Donate Section */
+#donate {
+background: #e6f4ea;
+border-radius: 16px;
+padding: 48px 20px;
+max-width: 900px;
+margin: 40px auto 80px auto;
+box-shadow: 0 8px 24px #ccc;
+text-align: center;
+}
+#donate h2 {
+color: var(--primary-color);
+font-family: var(--font-secondary);
+font-size: 2.3rem;
+margin-bottom: 20px;
+}
+#donate h3 {
+color: #269f6e;
+font-weight: normal;
+font-size: 1.1rem;
+margin-bottom: 36px;
+}
+#donate .donate-box {
+display: flex;
+flex-wrap: wrap;
+gap: 36px;
+justify-content: center;
+}
+#donate .donate-card {
+background: white;
+border-radius: 16px;
+box-shadow: 0 2px 8px #c6e1d9;
+width: 320px;
+padding: 28px 16px;
+text-align: center;
+transition: box-shadow 0.3s ease;
+}
+#donate .donate-card:hover,
+#donate .donate-card:focus-within {
+box-shadow: 0 8px 24px #a0cbb3;
+outline: none;
+}
+#donate .donate-card strong {
+color: #4C7CAF;
+font-size: 1.1rem;
+margin-bottom: 12px;
+display: block;
+}
+#donate .donate-card:nth-child(2) strong {
+color: var(--primary-color);
+}
+#donate .donate-card img {
+width: 140px;
+border-radius: 12px;
+box-shadow: 0 2px 6px #e3e3e3;
+margin-bottom: 12px;
+}
+#donate .donate-card p {
+margin: 0.3rem 0;
+font-size: 1rem;
+color: var(--text-color);
+}
+/* Wishes Section */
+#wishes {
+max-width: 900px;
+margin: 0 auto 80px auto;
+background: white;
+border-radius: 16px;
+padding: 40px 30px;
+box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+#wishes h2 {
+color: var(--primary-color);
+font-family: var(--font-secondary);
+font-size: 2.3rem;
+text-align: center;
+margin-bottom: 0.5rem;
+}
+#wishes h3 {
+color: var(--secondary-color);
+font-weight: 400;
+font-size: 1.1rem;
+text-align: center;
+margin-bottom: 2rem;
+font-family: var(--font-tertiary);
+}
+#wish-form {
+display: flex;
+flex-wrap: wrap;
+gap: 1rem;
+justify-content: center;
+margin-bottom: 2rem;
+}
+#wish-form input[type="text"],
+#wish-form textarea {
+border: 2px solid var(--primary-color);
+border-radius: 12px;
+padding: 0.75rem 1rem;
+font-size: 1rem;
+font-family: var(--font-primary);
+resize: vertical;
+width: 100%;
+max-width: 440px;
+transition: border-color 0.3s ease;
+}
+#wish-form input[type="text"]:focus,
+#wish-form textarea:focus {
+border-color: var(--secondary-color);
+outline: none;
+}
+#wish-form textarea {
+min-height: 100px;
+}
+#wish-form button {
+background-color: var(--primary-color);
+color: white;
+border: none;
+border-radius: 12px;
+padding: 0.75rem 2rem;
+font-size: 1.1rem;
+font-weight: 700;
+cursor: pointer;
+transition: background-color 0.3s ease;
+align-self: center;
+max-width: 200px;
+width: 100%;
+}
+#wish-form button:hover,
+#wish-form button:focus {
+background-color: var(--secondary-color);
+outline: none;
+}
+#show-comments {
+max-height: 400px;
+overflow-y: auto;
+padding-right: 10px;
+}
+.box-comment {
+border-bottom: 1px solid #ddd;
+padding: 1rem 0;
+}
+.box-comment:last-child {
+border-bottom: none;
+}
+.box-comment h4 {
+margin-bottom: 0.3rem;
+color: var(--primary-color);
+font-family: var(--font-secondary);
+font-size: 1.1rem;
+}
+.box-comment p {
+margin: 0;
+font-size: 1rem;
+color: var(--text-color);
+white-space: pre-wrap;
+font-family: var(--font-primary);
+}
+/* Footer */
+footer {
+text-align: center;
+padding: 3rem 1rem;
+background-color: var(--background-light);
+color: var(--primary-color);
+font-family: var(--font-secondary);
+font-size: 1.2rem;
+border-radius: 16px;
+margin-top: 4rem;
+box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+</style>
+</head>
+<body>
+<header>
+<nav id="navbar" aria-label="Main navigation">
+<div class="container" style="display:flex; justify-content: space-between; align-items: center;">
+<a href="#banner" class="logo" aria-label="Trang chủ đám cưới Ngọc Thạo và Hồng Chibi">T &amp; H</a>
+<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Mở menu">&#9776;</button>
+<ul id="primary-menu" role="menubar">
+<li role="none">
+<a href="#gallery" role="menuitem" tabindex="0">Album Hình Cưới</a>
+</li>
+<li role="none">
+<a href="#story" role="menuitem" tabindex="0">Chuyện tình yêu</a>
+</li>
+<li role="none">
+<a href="#invitation" role="menuitem" tabindex="0">Lời Ngỏ</a>
+</li>
+<li role="none">
+<a href="#event" role="menuitem" tabindex="0">Sự kiện cưới</a>
+</li>
+<li role="none">
+<a href="#couple" role="menuitem" tabindex="0">Cô Dâu &amp; Chú Rể</a>
+</li>
+<li role="none">
+<a href="#wishes" role="menuitem" tabindex="0">Sổ Lưu Bút</a>
+</li>
+<li role="none">
+<a href="#donate" role="menuitem" tabindex="0">Mừng cưới</a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<section id="banner" class="banner-section" role="banner" aria-label="Banner đám cưới Ngọc Thạo và Hồng Chibi">
+<div class="banner-content">
+<h1>Ngọc Thạo &amp; Hồng Chibi</h1>
+<p>Chúng tôi sắp kết hôn vào ngày 01/06/2025</p>
+</div>
+</section>
+<section id="gallery" aria-label="Album hình cưới">
+<div class="container">
+<h2 class="section-title">Album Hình Cưới</h2>
+<h3 class="section-sub-title">Được ai đó yêu sâu sắc sẽ mang lại cho bạn sức mạnh, trong khi yêu ai đó sâu sắc sẽ cho bạn dũng khí.</h3>
+<div class="gallery-grid" role="list">
+<div class="gallery-item" role="listitem" tabindex="0">
+<img src="https://cdn.biihappy.com/ziiweb/website/681f6b9db57ffc58b30e75a4/galleries/68273fd6442f4261ad08d934/small.jpg" alt="Ảnh cưới 1" />
+</div>
+<div class="gallery-item" role="listitem" tabindex="0">
+<img src="https://cdn.biihappy.com/ziiweb/website/681f6b9db57ffc58b30e75a4/galleries/6828a54b844f8b2edf01bb34/small.jpg" alt="Ảnh cưới 2" />
+</div>
+<div class="gallery-item" role="listitem" tabindex="0">
+<img src="https://cdn.biihappy.com/ziiweb/website/681f6b9db57ffc58b30e75a4/galleries/68273f934e710c428a065fd9/small.jpg" alt="Ảnh cưới 3" />
+</div>
+<div class="gallery-item" role="listitem" tabindex="0">
+<img src="https://cdn.biihappy.com/ziiweb/website/681f6b9db57ffc58b30e75a4/galleries/68273f81a400af24b105ebe3/small.jpg" alt="Ảnh cưới 4" />
+</div>
+<div class="gallery-item" role="listitem" tabindex="0">
+<img src="https://cdn.biihappy.com/ziiweb/website/681f6b9db57ffc58b30e75a4/galleries/68273fc8fb780634ed07fb14/small.jpg" alt="Ảnh cưới 5" />
+</div>
+<div class="gallery-item" role="listitem" tabindex="0">
+<img src="https://cdn.biihappy.com/ziiweb/website/681f6b9db57ffc58b30e75a4/galleries/6828a54565462278760803cc/small.jpg" alt="Ảnh cưới 6" />
+</div>
+</div>
+</div>
+</section>
+<section id="story" aria-label="Chuyện tình yêu">
+<div class="container">
+<h2 class="section-title">Chuyện tình yêu</h2>
+<h3 class="section-sub-title">Tình yêu không chỉ là một danh từ - nó là một động từ; nó còn hơn cả một cảm giác - đó là sự quan tâm, chia sẻ, giúp đỡ, hy sinh.</h3>
+<div class="timeline" role="list">
+<article class="timeline-card" role="listitem" tabindex="0">
+<span class="date">Tháng 1/2023</span>
+<h3>Lần đầu nhắn tin qua mạng</h3>
+<p>Chỉ là một cái "thích" tình cờ trên trang cá nhân, không ngờ lại mở đầu cho hàng loạt tin nhắn kéo dài đến tận khuya. Lúc ấy chẳng ai nghĩ rằng, từ một màn hình điện thoại, tụi mình sẽ dần bước vào cuộc sống của nhau.</p>
+<img src="https://cdn.biihappy.com/ziiweb/website/681f6b9db57ffc58b30e75a4/ff3c01977d40fe8898057f5a6fc05343.jpeg" alt="Lần đầu nhắn tin" />
+</article>
+<article class="timeline-card" role="listitem" tabindex="0">
+<span class="date">30/03/2023</span>
+<h3>Quyết định gặp nhau ngoài đời</h3>
+<p>Sau nhiều tuần trò chuyện không ngơi nghỉ, chúng mình dần quen với sự hiện diện của nhau. Khi đã đủ thân và tin tưởng, cả hai quyết định gặp ngoài đời. Hôm đó, mình qua đón cô ấy, lòng đầy hồi hộp. Trên tay là bó hoa nhỏ – giản dị nhưng đã được chuẩn bị từ trước.</p>
+<img src="https://cdn.biihappy.com/ziiweb/website/681f6b9db57ffc58b30e75a4/7875b97020ac8898a76d8753ff655d46.jpeg" alt="Quyết định gặp nhau" />
+</article>
+<article class="timeline-card" role="listitem" tabindex="0">
+<span class="date">21/04/2023</span>
+<h3>Chính thức hẹn hò</h3>
+<p>Sau vài buổi hẹn nhẹ nhàng, hôm đó mình quyết định tạo bất ngờ. Mình đón cô ấy đến một nhà hàng steak lãng mạn, nơi đã chuẩn bị sẵn hoa và không gian ấm cúng. Khi đến nơi, ánh nến dịu nhẹ khiến cô ấy ngạc nhiên. Mình bước tới, thì thầm: “Làm người yêu anh nhé?” Cô ấy cười, đỏ mặt và khẽ gật đầu.</p>
+<img src="https://cdn.biihappy.com/ziiweb/website/681f6b9db57ffc58b30e75a4/80497c21b0e90fe51b02dfedd5cec06f.jpeg" alt="Chính thức hẹn hò" />
+</article>
+<article class="timeline-card" role="listitem" tabindex="0">
+<span class="date">18/11/2023</span>
+<h3>Chuyến Đi Xa Đáng Nhớ</h3>
+<p>Chuyến đi xa đầu tiên cùng vài người bạn tưởng suôn sẻ, ai ngờ vừa khởi hành đã hỏng xe, rồi tất bật ra sân bay trong cảnh “chạy deadline” và... trễ chuyến. Cả nhóm cuống cuồng tìm vé mới, người chạy quầy, người tra app. Mệt rã rời mà cũng buồn cười — mới khởi hành đã như chơi trò sinh tồn. Rồi Đà Lạt đón bằng cái lạnh dễ thương và những con dốc quen tên. Cả nhóm ríu rít, riêng hai đứa vẫn âm thầm quan tâm nhau — từ ly sữa đậu đến chiếc mũ chụp vội giữa cơn gió.</p>
+<img src="https://cdn.biihappy.com/ziiweb/website/681f6b9db57ffc58b30e75a4/8894560208f9c2f22997472abb617633.jpeg" alt="Chuyến đi xa" />
+</article>
+<article class="timeline-card" role="listitem" tabindex="0">
+<span class="date">19/04/2024</span>
+<h3>Chuyến Xuất Ngoại Đầu Tiên</h3>
+<p>Gọi là “xuất ngoại” cho sang, chứ thật ra chỉ là đi Sapa rồi tiện qua Hà Khẩu chơi một vòng. Hai đứa hí hửng cầm hộ chiếu như sắp đi châu Âu. Bên kia, mọi thứ lạ lẫm: đường sá, biển hiệu, món ăn quen mà vị chẳng giống bên này. Lạc đường vài lần, gọi món sai cũng mấy bận, nhưng vẫn tay trong tay cười toe toét. Chuyến đi ngắn, chẳng sang chảnh, nhưng là lần đầu cùng nhau bước qua biên giới — một bước nhỏ, cho những hành trình xa hơn sau này.</p>
+<img src="https://cdn.biihappy.com/ziiweb/website/681f6b9db57ffc58b30e75a4/2e462a005176da5711fa7a9eaaaa64fc.jpeg" alt="Chuyến xuất ngoại" />
+</article>
+<article class="timeline-card" role="listitem" tabindex="0">
+<span class="date">23/11/2024</span>
+<h3>Một Chiếc Nhẫn, Một Chiếc Bánh, Một Cái Gật Đầu</h3>
+<p>Chuyến đi Tam Đảo tưởng là kèo “xả stress” với hội bạn, nhưng thật ra ai cũng là đồng phạm. Mình giấu chiếc nhẫn trong balo từ trước, cả nhóm thì chia vai: người rủ đi ăn, người đánh lạc hướng. Cô ấy vô tư, chỉ háo hức chụp ảnh, ăn uống. Tối đó, bên bếp nướng rôm rả, mình mang chiếc bánh ra, giả vờ là món tráng miệng. “Châm nến đi em,” mình nói. Cô ấy cúi xuống — rồi khựng lại khi dòng chữ "Marry Me" hiện lên dưới ánh nến. Mình rút nhẫn, quỳ xuống giữa tiếng reo hò: “Lấy anh nhé?” Cô ấy đỏ mặt gật đầu, và bọn mình trao nhau nụ hôn giữa đêm Tam Đảo ấm áp.</p>
+<img src="https://cdn.biihappy.com/ziiweb/website/681f6b9db57ffc58b30e75a4/e7d50421b435b7d9cd8b0669f9781d07.jpeg" alt="Cầu hôn" />
+</article>
+<article class="timeline-card" role="listitem" tabindex="0">
+<span class="date">11/12/2024</span>
+<h3>Ngày Dạm Ngõ</h3>
+<p>Sau bao chuyến đi, cuối cùng cũng đến lúc… về. Về với ba mẹ hai bên, với một ngày dạm ngõ vừa mong chờ vừa hồi hộp. Mình dậy sớm, chuẩn bị lễ lạt chỉn chu. Tay run nhưng vẫn cười – vì hôm nay, mình chính thức xin phép ba mẹ cô ấy. Không rộn ràng như lễ cưới, nhưng là dấu mốc quan trọng: khi tình yêu có thêm gia đình đồng hành và chúc phúc. Thuyền tình đã cập bến – nhẹ nhàng, nhưng đầy ý nghĩa.</p>
+<img src="https://cdn.biihappy.com/ziiweb/website/681f6b9db57ffc58b30e75a4/33172f10564dde012649cbbc14d21c20.jpeg" alt="Ngày dạm ngõ" />
+</article>
+</div>
+</div>
+</section>
+<section id="invitation" aria-label="Lời ngỏ">
+<div class="container">
+<h2 class="section-title">Lời Ngỏ</h2>
+<div class="invitation-content">
+<p>Cảm ơn tất cả những người bạn thân yêu của tôi!<br />
+Tôi biết các bạn rất bận rộn, bận rộn với công việc, bận rộn với công việc gia đình…<br />
+Nhưng tất cả đã có mặt hôm nay để chúc mừng tình yêu và hạnh phúc của chúng tôi.<br />
+Một lần nữa chân thành cảm ơn tất cả các bạn!</p>
+</div>
+<div class="couple-img">
+<img src="https://cdn.biihappy.com/ziiweb/website/681f6b9db57ffc58b30e75a4/templates/643d7aa30be61636f4051958/5bb323954a9bd004af3aa2fed83ee50f.jpg" alt="Ảnh cặp đôi Ngọc Thạo và Hồng Chibi" />
+</div>
+<div class="invitation-couple">
+<p>*Groom / <span>Ngọc Thạo</span></p>
+<p>*Bride / <span>Hồng Chibi</span></p>
+</div>
+</div>
+</section>
+<section id="event" aria-label="Sự kiện cưới">
+<div class="container">
+<h2 class="section-title">Sự Kiện Cưới</h2>
+<h3 class="section-sub-title">Cảm ơn bạn rất nhiều vì đã gửi những lời chúc mừng tốt đẹp nhất đến đám cưới của chúng tôi!</h3>
+<article class="event-item" tabindex="0">
+<div class="image-wrap" style="background-image: url('https://cdn.biihappy.com/ziiweb/website/681f6b9db57ffc58b30e75a4/03096cc3229011f8df484b52fbd0079a.jpeg');" aria-label="Tiệc cưới nhà gái"></div>
+<div class="info-wrap">
+<h5>Tiệc cưới nhà gái</h5>
+<strong>11:00 31/05/2025</strong>
+<p>Thôn Tháp – Thị Trấn Kiện Khê – Thanh Liêm – Hà Nam</p>
+<a href="#" aria-label="Thêm tiệc cưới nhà gái vào lịch">Thêm vào lịch</a>
+<a href="https://maps.app.goo.gl/gGrRUk4eQnhBa6XF8?g_st=com.google.maps.preview.copy" target="_blank" rel="noopener" aria-label="Xem bản đồ tiệc cưới nhà gái">Xem bản đồ</a>
+</div>
+</article>
+<article class="event-item" tabindex="0">
+<div class="image-wrap" style="background-image: url('https://cdn.biihappy.com/ziiweb/website/681f6b9db57ffc58b30e75a4/492c8b56c15c3097dabc0841896163da.jpeg');" aria-label="Tiệc cưới nhà trai"></div>
+<div class="info-wrap">
+<h5>Tiệc cưới nhà trai</h5>
+<strong>16:30 31/05/2025</strong>
+<p>240 đường đền gióng - Phù Linh - Sóc Sơn - Hà Nội</p>
+<a href="#" aria-label="Thêm tiệc cưới nhà trai vào lịch">Thêm vào lịch</a>
+<a href="https://maps.app.goo.gl/mAExXdQpF2uf6Gcv8?g_st=com.google.maps.preview.copy" target="_blank" rel="noopener" aria-label="Xem bản đồ tiệc cưới nhà trai">Xem bản đồ</a>
+</div>
+</article>
+<article class="event-item" tabindex="0">
+<div class="image-wrap" style="background-image: url('https://cdn.biihappy.com/ziiweb/website/681f6b9db57ffc58b30e75a4/24af7716e867afb4c81a285dff0181b0.jpeg');" aria-label="Lễ Đính Hôn"></div>
+<div class="info-wrap">
+<h5>Lễ Đính Hôn</h5>
+<strong>07:45 01/06/2025</strong>
+<p>Thôn Tháp – Thị Trấn Kiện Khê – Thanh Liêm – Hà Nam</p>
+<a href="#" aria-label="Thêm lễ đính hôn vào lịch">Thêm vào lịch</a>
+<a href="https://maps.app.goo.gl/gGrRUk4eQnhBa6XF8?g_st=com.google.maps.preview.copy" target="_blank" rel="noopener" aria-label="Xem bản đồ lễ đính hôn">Xem bản đồ</a>
+</div>
+</article>
+<article class="event-item" tabindex="0">
+<div class="image-wrap" style="background-image: url('https://cdn.biihappy.com/ziiweb/website/681f6b9db57ffc58b30e75a4/764f71b08db03da1fb1d073f70bd3cb3.jpeg');" aria-label="Lễ Thành Hôn"></div>
+<div class="info-wrap">
+<h5>Lễ Thành Hôn</h5>
+<strong>11:40 01/06/2025</strong>
+<p>240 đường đền gióng - Phù Linh - Sóc Sơn - Hà Nội</p>
+<a href="#" aria-label="Thêm lễ thành hôn vào lịch">Thêm vào lịch</a>
+<a href="https://maps.app.goo.gl/mAExXdQpF2uf6Gcv8?g_st=com.google.maps.preview.copy" target="_blank" rel="noopener" aria-label="Xem bản đồ lễ thành hôn">Xem bản đồ</a>
+</div>
+</article>
+</div>
+</section>
+<section id="couple" aria-label="Cô dâu và chú rể">
+<div class="container">
+<h2 class="section-title">Cô Dâu &amp; Chú Rể</h2>
+<div class="wrap-people">
+<div class="member member-groom" tabindex="0" aria-label="Chú rể Ngọc Thạo">
+<div class="member-image">
+<img src="https://cdn.biihappy.com/ziiweb/website/681f6b9db57ffc58b30e75a4/c8da625691889151e310ebefc7781e67.jpeg" alt="Ảnh chú rể Ngọc Thạo" />
+</div>
+<div class="parent-name">Con bà: <span>Nguyễn Thị Phượng</span></div>
+<p class="text-story">
+Chàng trai sinh ra và lớn lên tại Hà Nội. Từ những năm tháng theo học ngành Khoa học máy tính, anh dần bén duyên với công việc trong lĩnh vực IT – nơi mang đến cho anh không chỉ là nghề nghiệp mà còn là niềm đam mê. Tưởng bề ngoài ít nói, nhưng khi thân thiết rồi bạn sẽ thấy một con người vui vẻ, hòa đồng và rất dễ mến.<br />
+Ngoài công việc gắn liền với bàn phím và những dòng code, anh còn có niềm đam mê với những cung đường xa. Anh thích đi phượt, trekking, khám phá thiên nhiên, khám phá những vùng đất mới để cảm nhận vẻ đẹp của cuộc sống theo cách riêng.
+</p>
+<div class="member-name">Ngọc Thạo</div>
+</div>
+<div class="member member-bride" tabindex="0" aria-label="Cô dâu Hồng Chibi">
+<div class="member-image">
+<img src="https://cdn.biihappy.com/ziiweb/website/681f6b9db57ffc58b30e75a4/7b22dcfd1f94223ba00718a0cd1c9a40.jpeg" alt="Ảnh cô dâu Hồng Chibi" />
+</div>
+<div class="parent-name">Con ông: <span>Trần Văn Cường</span></div>
+<div class="parent-name">Con bà: <span>Dương Thị Hương</span></div>
+<p class="text-story">
+Cô nàng thư giãn sinh ra lớn lên tại Hà Nam, nhưng lại cảm nhận nhịp sống Hà Nội. Cô luôn muốn tìm kiếm sự khác biệt. Cuộc sống với cô luôn là sự bất ngờ vô tận.
+</p>
+<div class="member-name">Hồng Chibi</div>
+</div>
+</div>
+</div>
+</section>
+<section id="donate" aria-label="Hộp mừng cưới">
+<h2>Hộp mừng cưới</h2>
+<h3>Thật vui vì được gặp và đón tiếp các bạn trong một dịp đặc biệt như đám cưới của chúng tôi.</h3>
+<div class="donate-box" role="list">
+<div class="donate-card" role="listitem" tabindex="0" aria-label="Thông tin chuyển khoản đến chú rể">
+<strong>Đến chú rể</strong>
+<img src="https://cdn.biihappy.com/ziiweb/website/681f6b9db57ffc58b30e75a4/0295e197df753c95a5104f398dd64fee.png" alt="QR code chuyển khoản đến chú rể" />
+<p>Ngân hàng: <strong>ACB</strong></p>
+<p>Tên tài khoản: <strong>Nguyễn Ngọc Thạo</strong></p>
+<p>Số tài khoản: <strong>254267309</strong></p>
+</div>
+<div class="donate-card" role="listitem" tabindex="0" aria-label="Thông tin chuyển khoản đến cô dâu">
+<strong>Đến cô dâu</strong>
+<img src="https://cdn.biihappy.com/ziiweb/website/681f6b9db57ffc58b30e75a4/ab6fe0109d75bb1d6e128592fee0b04d.png" alt="QR code chuyển khoản đến cô dâu" />
+<p>Ngân hàng: <strong>Techcombank</strong></p>
+<p>Tên tài khoản: <strong>Tran Thi Hong</strong></p>
+<p>Số tài khoản: <strong>19033848841011</strong></p>
+</div>
+</div>
+</section>
+<section id="wishes" aria-label="Sổ lưu bút">
+<h2 class="section-title">Sổ Lưu Bút</h2>
+<h3 class="section-sub-title">Cảm ơn bạn rất nhiều vì đã gửi những lời chúc mừng tốt đẹp nhất đến đám cưới của chúng tôi!</h3>
+<form id="wish-form" aria-label="Form gửi lời chúc mừng đám cưới">
+<input type="text" id="name-comment" name="name" placeholder="Nhập tên của bạn*" required aria-required="true" aria-label="Tên của bạn" />
+<input type="text" id="email-comment" name="email" placeholder="E-mail" aria-label="Email của bạn" />
+<textarea id="content" name="content" placeholder="Nhập lời chúc của bạn*" rows="3" required aria-required="true" aria-label="Lời chúc của bạn"></textarea>
+<button type="submit" id="btn-submit-comment" aria-label="Gửi lời chúc">Gửi lời chúc</button>
+</form>
+<div id="show-comments" aria-live="polite" aria-relevant="additions" aria-atomic="true">
+<div class="box-comment" tabindex="0">
+<h4>Loi.TR</h4>
+<p>Xin chúc mừng ngày vui vk ck người đẹp😍😍</p>
+</div>
+<div class="box-comment" tabindex="0">
+<h4>Dung Zịt pí thư</h4>
+<p>Chúc mừng lớp trưởng! Chúc cho cuộc sống của vợ chồng Anh luôn hạnh phúc viên mãn và ngập tràn tiếng cười😊
+Lấy được Vợ rồi nhớ xin vợ đi họp lớp đầy đủ nhé :)))))😀</p>
+</div>
+<div class="box-comment" tabindex="0">
+<h4>Bạn PCMinh</h4>
+<p>Chúc mừng hạnh phúc 2 bạn!</p>
+</div>
+<div class="box-comment" tabindex="0">
+<h4>Chị VTChi</h4>
+<p>Chúc mừng hạnh phúc hai em! Nghe câu chuyện tình yêu của hai em mà chị thấy thật ngọt ngào và đẹp như một giấc mơ vậy! Chị rất vui và mong chờ ngày trọng đại của hai em. Tiếc là chị có việc bận vào đúng hôm đó nên không thể đến chung vui cùng hai em được. Chị xin gửi lời chúc tốt đẹp nhất đến hai em, chúc hai em từ giờ đến lúc đó luôn tràn ngập niềm vui và chuẩn bị thật tốt cho một hành trình mới thật hạnh phúc nhé! Chúc hai em mãi mãi yêu thương và trân trọng nhau.♥️♥️♥️</p>
+</div>
+<div class="box-comment" tabindex="0">
+<h4>Hương Xù</h4>
+<p>Thân gửi anh Thạo,
+
+Là một người chứng kiến biết bao khoảnh khắc thiêng liêng trong các lễ cưới, hôm nay em lại thấy xúc động hơn bao giờ hết — bởi chú rể không ai khác chính là anh, người anh họ thân thiết.
+
+Chúc anh và chị dâu một cuộc sống hôn nhân trọn vẹn yêu thương, nơi mỗi ngày đều là một lời hứa mới, một cơ hội để yêu nhau nhiều hơn. Hạnh phúc thật sự không nằm ở sự hoàn hảo, mà ở việc hai người cùng nắm tay vượt qua mọi không hoàn hảo của cuộc đời — và em tin, anh chị làm được điều đó bằng trái tim đầy chân thành.
+
+Chúc mái ấm của anh mãi mãi rộn tiếng cười, tràn yêu thương, và luôn đủ vững vàng để là nơi trở về an yên nhất.
+
+Thương mến,
+Em gái Hương</p>
+</div>
+<div class="box-comment" tabindex="0">
+<h4>E Gấm kiai</h4>
+<p>chúc anh chị trăm năm hạnh phúc và sớm sinh quý tử nha c</p>
+</div>
+</div>
+</section>
+<footer role="contentinfo">
+<p>Thank you!</p>
+<p>-- Ngọc Thạo &amp; Hồng Chibi --</p>
+</footer>
+<script>
+// Responsive menu toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav');
+menuToggle.addEventListener('click', () => {
+const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+menuToggle.setAttribute('aria-expanded', !expanded);
+nav.classList.toggle('active');
+});
+// Simple form submission simulation
+const wishForm = document.getElementById('wish-form');
+const showComments = document.getElementById('show-comments');
+wishForm.addEventListener('submit', function(e) {
+e.preventDefault();
+const name = this.name.value.trim();
+const content = this.content.value.trim();
+if (!name || !content) {
+alert('Vui lòng nhập đầy đủ tên và lời chúc.');
+return;
+}
+const commentBox = document.createElement('div');
+commentBox.className = 'box-comment';
+commentBox.tabIndex = 0;
+commentBox.innerHTML = `<h4>${name}</h4><p>${content.replace(/\n/g, '<br>')}</p>`;
+showComments.prepend(commentBox);
+this.reset();
+alert('Cảm ơn bạn đã gửi lời chúc!');
+});
+</script>
+</body>
+</html>
